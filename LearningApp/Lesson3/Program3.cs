@@ -13,7 +13,6 @@ namespace LearningApp.Lesson3
             Console.WriteLine("Iveskite trecia skaiciu:");
             int skaicius3 = Convert.ToInt32(Console.ReadLine());
 
-<<<<<<< HEAD
             Console.WriteLine("Didziausias skaicius:" + Math.Max(Math.Max(skaicius1, skaicius2), skaicius3));
 
             if (skaicius1 > skaicius2 && skaicius1 < 100)
@@ -31,22 +30,32 @@ namespace LearningApp.Lesson3
             if ((skaicius3 >= 5 && skaicius3 <= 10) || skaicius3 > skaicius1 && skaicius3 > skaicius2)
             {
                 Console.WriteLine("Trecias skaicius yra tarp 5 ir 10 arba yra didesnis uz pirmaji arba antraji skaiciu");
-=======
-            switch (skaicius1)
-            {
-                case 1:
-                    Console.WriteLine(skaicius1 + skaicius2 + skaicius3);
-                    break;
-                case 2:
-                    Console.WriteLine(skaicius1 - skaicius3);
-                    break;
-                case 3:
-                    Console.WriteLine(skaicius2 * skaicius3);
-                    break;
-                default:
-                    Console.WriteLine("Ivestas kitas skaicius");
-                    break;
->>>>>>> SwitchTesting
+
+
+                //Switch testing
+
+                Console.WriteLine("Iveskite pirma skaiciu:");
+                skaicius1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Iveskite antra skaiciu:");
+                skaicius2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Iveskite trecia skaiciu:");
+                skaicius3 = Convert.ToInt32(Console.ReadLine());
+                switch (skaicius1)
+                {
+                    case 1:
+                        Console.WriteLine(skaicius1 + skaicius2 + skaicius3);
+                        break;
+                    case 2:
+                        Console.WriteLine(skaicius1 - skaicius3);
+                        break;
+                    case 3:
+                        Console.WriteLine(skaicius2 * skaicius3);
+                        break;
+                    default:
+                        Console.WriteLine("Ivestas kitas skaicius");
+                        break;
+
+                }
             }
         }
     }
