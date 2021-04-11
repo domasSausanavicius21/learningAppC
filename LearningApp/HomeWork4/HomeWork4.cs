@@ -94,28 +94,99 @@ namespace LearningApp.HomeWork4
         /// 4 Papildoma
         ////////////////////////
         ///
+
+        ///// 4.1  D20
         /*
         {
-            const double min = 0.0;
-            const double max = 20.0;
+            const int min = 0;
+            const int max = 20;
 
-            double resultD20 = D20(min, max);
+            int resultD20 = D20(min, max);
 
             Console.WriteLine(resultD20);
 
-            static double D20(double min, double max)
+            static int D20(int min, int max)
             {
-                return Random.NextDouble(min, max);
+                int resultD20 = new Random().Next(min, max);
+                return resultD20;
             }
         }
         */
+
+        ///// 4.2 D10
+        /*
+        {
+            const int min = 0;
+            const int max = 10;
+
+            int resultD10 = D10(min, max);
+
+            Console.WriteLine(resultD10);
+
+            static int D10(int min, int max)
+            {
+                int resultD10 = new Random().Next(min, max);
+                return resultD10;
+            }
+        }
+        */
+
+        ///// 4.3 D6
+        /*
+        {
+            const int min = 0;
+            const int max = 6;
+
+            int resultD6 = D6(min, max);
+
+            Console.WriteLine(resultD6);
+
+            static int D6(int min, int max)
+            {
+                int resultD6 = new Random().Next(min, max);
+                return resultD6;
+            }
+        }
+        */
+
+
+
         ////////////////////////
         /// 5 Papildoma
         ////////////////////////
         ///
+        /*
+        {
+            int from = 0;
+            int to = 100;
+            Console.WriteLine("Iveskite skaiciu nuo " + from + " iki " + to);
+            int skaicius1 = Convert.ToInt32(Console.ReadLine());
 
+            inRange(skaicius1, from, to);
+
+            static int inRange (int skaicius1, int from, int to)
+            {
+
+                while (skaicius1 < from || skaicius1 > to);
+                {
+                    Console.WriteLine("Blogai ivestas skaicius, iveskite skaiciu is naujo.");
+                    skaicius1 = Convert.ToInt32(Console.ReadLine());
+                }
+
+                if (skaicius1 => from && skaicius1 <= to);
+                {
+                    return skaicius1;
+                }
+
+            }
+
+                //Console.WriteLine(skaicius1);
+
+        } 
+        */
         {
 
         }
+
     }
 }
