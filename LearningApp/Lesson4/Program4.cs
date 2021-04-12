@@ -136,7 +136,7 @@ namespace LearningApp.Lesson4
             Console.WriteLine(suma);
 
             */
-
+            /*
             int suma = 0;
             int i = 0;
 
@@ -158,7 +158,7 @@ namespace LearningApp.Lesson4
             }
 
             Console.WriteLine(suma);
-
+            */
         }
     }
 }

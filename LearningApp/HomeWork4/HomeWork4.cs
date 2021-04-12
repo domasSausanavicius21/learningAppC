@@ -167,13 +167,13 @@ namespace LearningApp.HomeWork4
             static int inRange (int skaicius1, int from, int to)
             {
 
-                while (skaicius1 < from || skaicius1 > to);
+                while (skaicius1 <= from || skaicius1 >= to);
                 {
                     Console.WriteLine("Blogai ivestas skaicius, iveskite skaiciu is naujo.");
                     skaicius1 = Convert.ToInt32(Console.ReadLine());
                 }
 
-                if (skaicius1 => from && skaicius1 <= to);
+                if (skaicius1 >= from && skaicius1 <= to);
                 {
                     return skaicius1;
                 }
@@ -183,10 +183,13 @@ namespace LearningApp.HomeWork4
                 //Console.WriteLine(skaicius1);
 
         } 
-        */
+        
+            */
         {
 
         }
-
     }
+    
+        
 }
+
