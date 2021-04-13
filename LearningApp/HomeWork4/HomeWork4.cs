@@ -56,39 +56,46 @@ namespace LearningApp.HomeWork4
         ////////////////////////
         /// 3 Papildoma
         ////////////////////////
-        /*
+        
         {
             Console.WriteLine("Iveskite skaiciu:");
             int skaicius1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(isPrimal(skaicius1));
+            Console.WriteLine(isPrime(skaicius1));
         }
 
-        static bool isPrimal(int skaicius1)
+        static bool isPrime(int skaicius1)
         {
-            //return (skaicius1 <= 1 || (skaicius1 %skaicius1 == 0 && skaicius1 %2 != 0));
             bool result = true;
 
-            if (skaicius1 == 0 || skaicius1 == 1)
+            if (skaicius1 == 0 || skaicius1 == 1) 
             {
                 result = false;
                 return result;
             }
+            else if (skaicius1 == 2)
+            {
+                result = true;
+                return result;
+            }
             else
             {
-                for (int a = 2; a <= skaicius1 / 2; a++)
-                {
-                    if (skaicius1 % a == 0)
+                if (skaicius1 %skaicius1 == 0 && skaicius1 %1 == 0 && skaicius1 % 2 != 0)
                     {
-                        result = false;
+                        result = true;
                         return result;
                     }
+                else
+                {
+                    result = false;
+                    return result; 
+                }
 
                 }
             }
         }
     }
-    */
+    
 
         ////////////////////////
         /// 4 Papildoma
@@ -185,11 +192,7 @@ namespace LearningApp.HomeWork4
         } 
         
             */
-        {
 
-        }
-    }
+
+
     
-        
-}
-
