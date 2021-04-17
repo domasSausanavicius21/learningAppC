@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+<<<<<<< HEAD
     <StartupObject>LearningApp.Lesson8.Program8</StartupObject>
+=======
+    <StartupObject>LearningApp.BigHomeWork1.BigHomeWork1</StartupObject>
+>>>>>>> BigHomeWork1
   </PropertyGroup>
 
 </Project>
