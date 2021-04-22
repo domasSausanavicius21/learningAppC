@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LearningApp.GameSample.Game
 {
-    class Hero
+    class Hero : Unit
     {
         private int x;
         private int y;
         private string name;
 
-        public Hero (int x, int y, string name)
+        public Hero (int x, int y, string name) : base (x, y, name)
         {
             this.x = x;
             this.y = y;

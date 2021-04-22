@@ -14,8 +14,6 @@ namespace LearningApp.Eurolyga
         public string AwayTeamJersey;
         public int HomeTeamPoints;
         public int AwayTeamPoints;
-        public bool HomeTeamWon;
-        public bool AwayTeamWon;
 
         public Game(string homeTeam, string awayTeam, string homeTeamJersey, string awayTeamJersey, int homeTeamPoints, int awayTeamPoints)
         {

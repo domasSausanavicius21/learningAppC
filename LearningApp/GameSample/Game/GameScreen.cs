@@ -18,7 +18,7 @@ namespace LearningApp.GameSample.Game
             this.height = height;
         }
 
-        public void SetHero (Hero hero)
+        public void SetHero(Hero hero)
         {
             this.hero = hero;
         }
