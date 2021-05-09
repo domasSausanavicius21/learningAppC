@@ -4,34 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningApp.GameSample.Game
+namespace LearningApp.GameSample.Units
 {
     class Hero : Unit
     {
-        private int x;
-        private int y;
-        private string name;
-
-        public Hero (int x, int y, string name) : base (x, y, name)
+        public Hero(string name, int x, int y) : base(name, x, y)
         {
-            this.x = x;
-            this.y = y;
-            this.name = name;
         }
+
         public void MoveRight()
         {
-            x++;
+            X++;
         }
 
         public void MoveLeft()
         {
-            x--;
+            X--;
         }
-
-        public void PrintInfo()
-        {
-            Console.WriteLine("Hero " + name + " is at X: " + x + " Y: " + y);
-        }
-
     }
 }

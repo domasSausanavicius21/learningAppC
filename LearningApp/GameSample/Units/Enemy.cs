@@ -4,30 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningApp.GameSample.Game
+namespace LearningApp.GameSample.Units
 {
     class Enemy : Unit
     {
         private int id;
-        private int x;
-        private int y;
-        
 
-        public Enemy(int id, int x, int y) : base (x, y, "name")
+        public Enemy(int id, string name, int x, int y) : base(name, x, y)
         {
             this.id = id;
-            this.x = x;
-            this.y = y;
-        }
-        public void MoveDown()
-        {
-            y--;
         }
 
-        public void PrintInfo()
+        public void MoveDown()
         {
-            Console.WriteLine("Enemy " + id + " is at X: " + x + " Y: " + y);
+            Y++;
         }
+
         public int GetId()
         {
             return id;

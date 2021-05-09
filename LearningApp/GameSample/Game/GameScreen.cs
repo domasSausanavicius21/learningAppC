@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningApp.GameSample.Units;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,10 @@ namespace LearningApp.GameSample.Game
     {
         private int width;
         private int height;
+
         private Hero hero;
         private List<Enemy> enemies = new List<Enemy>();
+
         public GameScreen(int width, int height)
         {
             this.width = width;
@@ -23,9 +26,18 @@ namespace LearningApp.GameSample.Game
             this.hero = hero;
         }
 
-        public void MoveHeroRight()
+        public void AddEnemy(Enemy enemy)
         {
-            hero.MoveRight();
+            enemies.Add(enemy);
+        }
+
+        public void Render()
+        {
+            hero.PrintInfo();
+            foreach (var enemy in enemies)
+            {
+                enemy.PrintInfo();
+            }
         }
 
         public void MoveHeroLeft()
@@ -33,38 +45,28 @@ namespace LearningApp.GameSample.Game
             hero.MoveLeft();
         }
 
-        public void AddEnemy(Enemy enemy)
+        public void MoveHeroRight()
         {
-            enemies.Add(enemy);
-        }
-
-        public void MoveAllEnemiesDown()
-        {
-            foreach (Enemy enemy in enemies)
-            {
-                enemy.MoveDown();
-            }
+            hero.MoveRight();
         }
 
         public Enemy GetEnemyById(int id)
         {
-            foreach (Enemy enemy in enemies)
+            foreach (var enemy in enemies)
             {
                 if (enemy.GetId() == id)
                 {
                     return enemy;
                 }
             }
-
             return null;
         }
 
-        public void Render()
+        public void MoveAllEnemiesDown()
         {
-            hero.PrintInfo();
-            foreach (Enemy enemy in enemies)
+            foreach (var enemy in enemies)
             {
-                enemy.PrintInfo();
+                enemy.MoveDown();
             }
         }
     }

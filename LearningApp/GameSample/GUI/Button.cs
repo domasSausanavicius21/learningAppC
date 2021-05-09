@@ -1,33 +1,42 @@
-﻿using LearningApp.GameSample.Gui;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningApp.GameSample.GUI
+namespace LearningApp.GameSample.Gui
 {
     class Button : GuiObject
     {
         private Frame activeFrame;
         private Frame notActiveFrame;
-        private bool isActive = false;
         private TextLine textLine;
 
-        public Button (int x, int y, int width, int height, string name) : base (x, y, width, height)
+        private const char activeChar = '#';
+        private const char notActiveChar = '+';
+
+        public Button(int x, int y, int width, int height, string label) : base(x, y, width, height)
         {
-            activeFrame = new Frame(x, y, width, height, '#');
-            notActiveFrame = new Frame(x, y, width, height, '*');
-            textLine = new TextLine(x + 2, y + 2, width - 2, name);
+            activeFrame = new Frame(x, y, width, height, activeChar);
+            notActiveFrame = new Frame(x, y, width, height, notActiveChar);
+            textLine = new TextLine(x + 1, y + height / 2, width - 2, label);
+            Label = label;
         }
 
-        public void Render()
-        {
+        public bool IsActive { get; set; }
+        public string Label { get; set; }
 
-        }
-        public void SetActive()
+        override public void Render()
         {
-
+            if (IsActive)
+            {
+                activeFrame.Render();
+            }
+            else
+            {
+                notActiveFrame.Render();
+            }
+            textLine.Render();
         }
     }
 }

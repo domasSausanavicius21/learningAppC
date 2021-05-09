@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningApp.GameSample.Units;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,46 +11,25 @@ namespace LearningApp.GameSample.Game
     {
         public void StartGame()
         {
-            Hero newHero = new Hero(1, 1, "ChuckNorris");
-
-            newHero.PrintInfo();
-
-            newHero.MoveRight();
-
-            newHero.PrintInfo();
-
-
-            Random rnd = new Random();
-
-            List<Enemy> enemies = new List<Enemy>();
+            GameScreen gameScreen = new GameScreen(200, 40);
+            gameScreen.SetHero(new Hero("Rand al'Thor", 5, 5));
 
             int uniqueId = 0;
-
+            Random rnd = new Random();
             for (int i = 0; i < 10; i++)
             {
-                enemies.Add(new Enemy(uniqueId, rnd.Next(0, 10), rnd.Next(0, 10)));
+                gameScreen.AddEnemy(new Enemy(uniqueId, "EnemyNr" + uniqueId, rnd.Next(0, 10), rnd.Next(0, 100)));
                 uniqueId++;
             }
 
-            for (int i = 0; i < enemies.Count; i++)
-            {
-                enemies[i].PrintInfo();
-                enemies[i].MoveDown();
-                enemies[i].PrintInfo();
-            }
+            gameScreen.Render();
 
-            GameScreen myGame = new GameScreen(200, 80);
+            gameScreen.MoveHeroLeft();
+            gameScreen.MoveAllEnemiesDown();
 
-            myGame.SetHero(new Hero(5, 5, "HERO"));
+            gameScreen.GetEnemyById(2).MoveDown();
 
-            myGame.Render();
-
-            myGame.MoveHeroLeft();
-
-            myGame.MoveAllEnemiesDown();
-
-            myGame.Render();
+            gameScreen.Render();
         }
-
     }
 }

@@ -105,6 +105,90 @@ namespace LearningApp.Lesson16
             File.Move("test2.txt", "..\test2.txt");
 
 
+            /*
+            Dictionary<string, int> myDictionary = new Dictionary<string, int>();
+
+            myDictionary.Add("labas", 0);
+
+            int number = myDictionary.Count();
+
+            Console.WriteLine(number);
+
+            myDictionary.Add("labas1", 1);
+
+            number = myDictionary.Count();
+
+            Console.WriteLine(number);
+
+            myDictionary.Remove("labas");
+
+            myDictionary.Clear();
+
+            number = myDictionary.Count();
+
+            Console.WriteLine(number);
+
+            myDictionary.Add("labas", 0);
+            myDictionary.Add("labas1", 1);
+
+            if (myDictionary.ContainsValue(1))
+            {
+                Console.WriteLine("Contains value");
+            }
+            else
+            {
+                Console.WriteLine("Doesn't contain value");
+            }
+            
+            if (myDictionary.ContainsKey("labas"))
+            {
+                Console.WriteLine("Contains key");
+            }
+            else
+            {
+                Console.WriteLine("Doesn't contain key");
+            }
+            */
+
+            Queue<string> newQueue = new Queue<string>();
+
+            newQueue.Enqueue("vienas");
+            newQueue.Enqueue("du");
+            newQueue.Enqueue("trys");
+            newQueue.Enqueue("keturi");
+
+            int count = newQueue.Count();
+
+            Console.WriteLine(count);
+
+            newQueue.Dequeue();
+
+            Console.WriteLine(newQueue.Count());
+
+            //newQueue.Clear();
+
+            Console.WriteLine(newQueue.Count());
+
+            Console.WriteLine(newQueue.Peek());
+
+            if (newQueue.Contains("du"))
+            {
+                Console.WriteLine("Contains du");
+            }
+            else
+            {
+                Console.WriteLine("Doesn't contain du");
+            }
+
+            string[] newArray = newQueue.ToArray();
+
+            Console.WriteLine(newArray[0]);
+
+
+            Stack<string> newStack = new Stack<string>();
+
+            newStack.Push("vienas");
+            newStack.Push("du");
 
 
 
