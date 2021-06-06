@@ -6,4 +6,10 @@
     <StartupObject>LearningApp.GameSample.GameProject</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="BJTry\**" />
+    <EmbeddedResource Remove="BJTry\**" />
+    <None Remove="BJTry\**" />
+  </ItemGroup>
+
 </Project>

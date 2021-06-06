@@ -1,0 +1,24 @@
+﻿<Window x:Name="mainWindow" x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF0E8028" Foreground="#FF851010" Cursor="Arrow">
+    <Window.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.BorderBrush>
+    <Grid HorizontalAlignment="Left" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="248*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="TestButton" Content="Button" Grid.Column="5" HorizontalAlignment="Left" Margin="75,153,0,0" VerticalAlignment="Top" Height="119" Width="188" Grid.ColumnSpan="3" Background="White" Click="HandleButtonClick" MouseMove="HandleMouseMovement"/>
+        <Label x:Name="TitleLabel" Content="Zdarof bernai&#xD;&#xA;" Grid.ColumnSpan="2" FontSize="50" FontFamily="Bahnschrift SemiBold" Margin="0,0,457,362"/>
+
+    </Grid>
+</Window>
