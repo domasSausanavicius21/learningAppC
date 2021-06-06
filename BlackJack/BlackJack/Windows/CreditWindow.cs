@@ -26,12 +26,8 @@ namespace BlackJack.Windows
             creditData.Add("\'Art\':");
             creditData.Add("Domas Sausanavicius");
             creditData.Add("");
-            creditData.Add("Domas Sausanavicius");
-            creditData.Add("Vardas Vardaitis");
-            creditData.Add("");
 
             creditTextBlock = new TextBlock(28 + 1, 10 + 1, 60 - 1, creditData);
-
 
             backButton = new Button(28 + 20, 10 + 14, 18, 3, "Back");
             backButton.IsActive = true;
@@ -42,14 +38,11 @@ namespace BlackJack.Windows
             base.Render();
             creditTextBlock.Render();
             backButton.Render();
-
-
         }
 
         public void StartCreditWindow()
         {
             ConsoleKeyInfo button = Console.ReadKey();
-            
 
             switch (button.Key)
             {
@@ -62,7 +55,6 @@ namespace BlackJack.Windows
                 default:
                     break;
             }
-
             StartCreditWindow();
         }
     }

@@ -52,7 +52,7 @@ namespace BlackJack.Game
             do
             {
                 PlayingDeck deck = new PlayingDeck(); // Generate & shuffle deck             
-                
+                pointer = 0;
                 
                 // Player enters their bet
 
